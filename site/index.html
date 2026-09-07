@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DRIFT/30 — Survive thirty days at sea</title>
+  <meta name="description" content="Survive thirty days at sea, build your raft, and raise a radio tower before the ocean wins. Play DRIFT/30 right in your browser — no install, no accounts." />
+  <meta name="theme-color" content="#05161c" />
+  <meta property="og:title" content="DRIFT/30 — Survive thirty days at sea" />
+  <meta property="og:description" content="One raft. One action per day. Thirty days of daylight. Play in your browser." />
+  <meta property="og:image" content="img/desktop.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Saira+Stencil+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="game/index.icon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- the drift tally: scroll = days survived -->
+  <aside class="drift" aria-hidden="true">
+    <svg class="drift-tally" viewBox="0 0 26 20" data-day-mark></svg>
+    <span class="drift-count">DAY <b id="drift-day">01</b>/30</span>
+  </aside>
+
+  <header class="hero" id="top">
+    <svg class="tide tide-hero" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 C 120 30, 240 90, 360 60 S 600 30, 720 60 S 960 90, 1080 60 S 1320 30, 1440 60 V90 H0 Z" fill="#0a2836"/>
+      <path d="M0 70 C 160 45, 320 92, 480 70 S 800 45, 960 70 S 1280 92, 1440 70 V90 H0 Z" fill="#0d323d"/>
+    </svg>
+    <p class="eyebrow">A 30-day survival gamble · nothing but water in every direction</p>
+    <h1 class="mark">DRIFT<i>30</i></h1>
+    <p class="hero-line">The Sable Ann went down at 03:40. You woke on the sea, on a raft the storm built out of her bones. You have a net, a purifier, and <b>thirty days of daylight</b> before the monsoon closes the shipping lanes.</p>
+    <p class="hero-kicker">A day buys exactly one thing. The sea buys everything else.</p>
+    <div class="cta-row">
+      <a class="cta cta-primary" href="#play">PLAY IN YOUR BROWSER</a>
+      <a class="cta cta-ghost" href="#briefing">READ THE BRIEFING</a>
+    </div>
+    <p class="hero-meta typed">no install · no accounts · keys 1–4 or tap to act</p>
+  </header>
+
+  <main>
+    <section class="play" id="play">
+      <p class="eyebrow" data-day="04">Day 04 · take the helm</p>
+      <h2>The whole ocean, in this tab.</h2>
+      <div class="shell">
+        <div class="frame" id="frame">
+          <div class="frame-poster" id="frame-poster">
+            <img src="img/desktop.jpg" alt="DRIFT/30 title screen above open water" loading="lazy" />
+            <button class="cta cta-primary frame-load" id="frame-load" type="button">LOAD THE DRIFT</button>
+            <p class="typed">loads the game engine · sound on first input</p>
+          </div>
+        </div>
+        <div class="frame-notes">
+          <p><b>CAST THE NET</b> feeds you. <b>HOOK THE JUNK</b> builds the future. You cannot do both before dusk.</p>
+          <p class="typed">on a keyboard: 1–4 act · M mute · Esc pause</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="briefing" id="briefing">
+      <svg class="tide" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 30 C 240 5, 480 55, 720 30 S 1200 5, 1440 30 V60 H0 Z" fill="#0a2836"/>
+      </svg>
+      <p class="eyebrow" data-day="09">Day 09 · the briefing</p>
+      <h2>Every morning, the sea sends a bill.</h2>
+      <figure class="still">
+        <img src="img/play.jpg" alt="A day resolving on the raft — gauges falling, the log writing itself" loading="lazy" />
+        <figcaption class="typed">Day 1 · the hook comes back heavy, the squall takes the lashings, and both go in the log.</figcaption>
+      </figure>
+      <div class="cards">
+        <article class="card">
+          <h3>THE DEAL</h3>
+          <p>Each dawn deals three actions — always affordable, always covering whatever is closest to killing you. You take <b>exactly one</b>. The rest of the day belongs to the sea.</p>
+        </article>
+        <article class="card">
+          <h3>THE TOLL</h3>
+          <p>Hunger and thirst climb in four steps across the run. No single day's work ever covers a single day's bill — the gap is what the raft is for.</p>
+        </article>
+        <article class="card">
+          <h3>TOMORROW</h3>
+          <p>The forecast is honest: a coming <b>TEMPEST</b> is a reason to spend today on the hull. The sea pre-rolls its weather so you can out-think it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifest" id="manifest">
+      <p class="eyebrow" data-day="17">Day 17 · the manifest</p>
+      <h2>Salvage is the only thing that outlasts you.</h2>
+      <p class="section-line">Five structures unlock as the days pass. The build order is yours — rushing the tower and skipping the greenhouse is a legitimate, dangerous plan.</p>
+      <ol class="ladder">
+        <li><span class="rung-name">RAIN CATCHER</span><span class="rung-blurb">The tarp drinks the sky.</span><b class="rung-yield">+5 water/day</b><span class="rung-cost">24 salvage · day 3</span></li>
+        <li><span class="rung-name">SCRAP SHELTER</span><span class="rung-blurb">Walls. Actual walls.</span><b class="rung-yield">+3 spirit · +1 hull/day</b><span class="rung-cost">34 salvage · day 7</span></li>
+        <li><span class="rung-name">SOLAR STILL</span><span class="rung-blurb">A green blink of company.</span><b class="rung-yield">+5 water · +2 food/day</b><span class="rung-cost">46 salvage · day 12</span></li>
+        <li><span class="rung-name">GREENHOUSE</span><span class="rung-blurb">Green, on the ocean.</span><b class="rung-yield">+9 food/day</b><span class="rung-cost">50 salvage · day 17</span></li>
+        <li class="rescue"><span class="rung-name">RADIO TOWER</span><span class="rung-blurb">Taller than hope.</span><b class="rung-yield">+4 spirit/day · the way home</b><span class="rung-cost">80 salvage · day 21</span></li>
+      </ol>
+    </section>
+
+    <section class="endings" id="endings">
+      <p class="eyebrow" data-day="30">Day 30 · how it ends</p>
+      <h2>Surviving is not the same as going home.</h2>
+      <div class="endings-row">
+        <article class="ending rescued">
+          <h3>SIGNAL ANSWERED</h3>
+          <p>The tower catches a freighter on the third sweep. You built the thing that could shout, and someone was listening.</p>
+        </article>
+        <article class="ending adrift">
+          <h3>STILL ADRIFT</h3>
+          <p>Thirty days and you are alive — but nothing on this deck can call for help. You point the raft north and start to paddle.</p>
+        </article>
+        <article class="ending lost">
+          <h3>THE SEA WON</h3>
+          <p>The tanks ran dry, the stores went, the hull gave, or you simply stopped bailing. The sea does not starve you on purpose. It forgets to feed you.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <svg class="tide" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 C 240 55, 480 5, 720 30 S 1200 55, 1440 30 V60 H0 Z" fill="#0a2836"/>
+    </svg>
+    <p class="mark mark-small">DRIFT<i>30</i></p>
+    <p class="typed">every wave, wave-crest and gull is procedural — no textures, no models, no audio files</p>
+    <p>rebuilt from the browser original in <b>Godot 4.6</b> · one codebase, four platforms · <a href="#top">back on deck</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
